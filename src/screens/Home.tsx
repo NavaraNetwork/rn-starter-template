@@ -14,6 +14,7 @@ import {IFact} from '../data/types';
 import colors from '../configs/colors';
 import {useAppDispatch} from '../hooks/redux';
 import tw from '../libs/tailwind';
+import toast from '../components/UI/Toast';
 
 const Home = () => {
   const {facts, bookmarks} = useSelector(
@@ -29,6 +30,7 @@ const Home = () => {
 
   const handlePress = (fact: IFact) => {
     dispatch(addBookmark(fact));
+    toast.success('added');
   };
 
   useEffect(() => {

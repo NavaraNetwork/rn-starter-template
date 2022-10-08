@@ -14,6 +14,7 @@ import {IFact} from '../data/types';
 import colors from '../configs/colors';
 import {useAppDispatch} from '../hooks/redux';
 import tw from '../libs/tailwind';
+import toast from '../components/UI/Toast';
 
 const Settings = () => {
   const {bookmarks} = useSelector((state: RootState) => state.factsReducer);
@@ -21,6 +22,7 @@ const Settings = () => {
 
   const handlePress = (fact: IFact) => {
     dispatch(removeBookmark(fact));
+    toast.info('removed');
   };
 
   return (
