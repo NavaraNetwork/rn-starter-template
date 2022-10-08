@@ -1,0 +1,26 @@
+{
+  "name": "rn-starter-template",
+  "version": "0.0.1",
+  "description": "Clean React Native template for a quick start with TypeScript.",
+  "files": [
+    "template",
+    "template.config.js"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:NavaraWallet/rn-starter-template.git"
+  },
+  "keywords": [
+    "react-native",
+    "typescript",
+    "jest",
+    "template",
+    "boilerplate"
+  ],
+  "author": "ThaiND",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/emin93/react-native-template-typescript/issues"
+  },
+  "homepage": "https://github.com/NavaraWallet/rn-starter-template"
+}
