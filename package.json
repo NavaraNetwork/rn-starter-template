@@ -8,7 +8,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git@github.com:NavaraWallet/rn-starter-template.git"
+    "url": "git@github.com:NavaraNetwork/rn-starter-template.git"
   },
   "keywords": [
     "react-native",
@@ -19,8 +19,5 @@
   ],
   "author": "ThaiND",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/emin93/react-native-template-typescript/issues"
-  },
-  "homepage": "https://github.com/NavaraWallet/rn-starter-template"
+  "homepage": "https://github.com/NavaraNetwork/rn-starter-template.git"
 }
