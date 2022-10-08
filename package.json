@@ -1,23 +1,105 @@
 {
-  "name": "rn-starter-template",
+  "name": "starterTemplate",
   "version": "0.0.1",
-  "description": "Clean React Native template for a quick start with TypeScript.",
-  "files": [
-    "template",
-    "template.config.js"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "git@github.com:NavaraNetwork/rn-starter-template.git"
+  "private": true,
+  "scripts": {
+    "android": "react-native run-android",
+    "ios": "react-native run-ios",
+    "start": "react-native start",
+    "test": "jest",
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "release": "standard-version",
+    "prepare": "patch-package",
+    "postinstall": "rn-nodeify --install crypto,fs,process,path,console --hack && husky install",
+    "version": "node ./src/scripts/version.js && [[ $(git status --porcelain -z | gawk '/version.json/ && /Info.plist/' ) ]] && git add version.json ios/"
   },
-  "keywords": [
-    "react-native",
-    "typescript",
-    "jest",
-    "template",
-    "boilerplate"
-  ],
-  "author": "ThaiND",
-  "license": "MIT",
-  "homepage": "https://github.com/NavaraNetwork/rn-starter-template.git"
+  "dependencies": {
+    "@react-navigation/bottom-tabs": "^6.4.0",
+    "@react-navigation/native": "^6.0.13",
+    "@react-navigation/native-stack": "^6.9.0",
+    "@react-navigation/stack": "^6.3.2",
+    "@reduxjs/toolkit": "^1.8.5",
+    "axios": "0.27.2",
+    "console-browserify": "^1.2.0",
+    "native-base": "^3.4.17",
+    "path-browserify": "^1.0.1",
+    "prop-types": "^15.8.1",
+    "react": "18.1.0",
+    "react-native": "0.70.2",
+    "react-native-crypto": "^2.2.0",
+    "react-native-gesture-handler": "^2.7.0",
+    "react-native-heroicons": "^3.2.0",
+    "react-native-level-fs": "^3.0.1",
+    "react-native-randombytes": "^3.0.0",
+    "react-native-safe-area-context": "^4.4.1",
+    "react-native-screens": "^3.18.0",
+    "react-native-svg": "^13.3.0",
+    "react-native-uuid": "^2.0.1",
+    "react-query": "^3.39.2",
+    "react-redux": "^8.0.4",
+    "redux": "^4.2.0",
+    "redux-persist": "^6.0.0",
+    "redux-thunk": "^2.4.1",
+    "rn-nodeify": "^10.3.0",
+    "twrnc": "^3.4.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.9",
+    "@babel/runtime": "^7.12.5",
+    "@commitlint/cli": "^17.1.2",
+    "@commitlint/config-conventional": "^17.1.0",
+    "@react-native-async-storage/async-storage": "^1.17.10",
+    "@react-native-community/eslint-config": "^2.0.0",
+    "@tsconfig/react-native": "^2.0.2",
+    "@types/jest": "^26.0.23",
+    "@types/node": "^18.8.3",
+    "@types/react-native": "^0.70.4",
+    "@types/react-redux": "^7.1.24",
+    "@types/react-test-renderer": "^18.0.0",
+    "@types/redux": "^3.6.0",
+    "@types/redux-persist": "^4.3.1",
+    "@types/redux-thunk": "^2.1.0",
+    "@typescript-eslint/eslint-plugin": "^5.37.0",
+    "@typescript-eslint/parser": "^5.37.0",
+    "babel-jest": "^26.6.3",
+    "eslint": "^7.32.0",
+    "events": "^3.3.0",
+    "fs": "^0.0.1-security",
+    "husky": "^8.0.1",
+    "jest": "^26.6.3",
+    "lint-staged": "^13.0.3",
+    "metro-react-native-babel-preset": "0.72.3",
+    "patch-package": "^6.4.7",
+    "path": "^0.12.7",
+    "plist": "^3.0.6",
+    "react-native-svg-transformer": "^1.0.0",
+    "react-test-renderer": "18.1.0",
+    "semver": "^7.3.8",
+    "standard-version": "^9.5.0",
+    "stream": "^0.0.2",
+    "typescript": "^4.8.3",
+    "xcode": "^3.0.1"
+  },
+  "jest": {
+    "preset": "react-native",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json",
+      "node"
+    ]
+  },
+  "react-native": {
+    "console": "console-browserify",
+    "crypto": "react-native-crypto",
+    "path": "path-browserify",
+    "fs": "react-native-level-fs"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "prettier --write"
+    ]
+  }
 }
